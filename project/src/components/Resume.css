@@ -1,0 +1,117 @@
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.resume-content:hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+.resume-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  justify-content: center;
+}
+
+.resume-tab {
+  padding: 12px 20px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.resume-tab.active {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.4);
+  color: #60a5fa;
+}
+
+.resume-tab:hover:not(.active) {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.resume-actions {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.resume-btn:hover {
+  background: rgba(37, 99, 235, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1400px) {
+  .resume-content {
+    padding: 40px;
+  }
+  
+  .resume-tab {
+    padding: 14px 24px;
+    font-size: 1.125rem;
+  }
+  
+  .resume-btn {
+    padding: 16px 28px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    padding: 24px;
+  }
+  
+  .resume-tabs {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .resume-tab {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+  
+  .resume-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .resume-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}
