@@ -1,0 +1,82 @@
+.interactive-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.maze-game {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.maze-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 1rem 0;
+}
+
+.maze-row {
+  display: flex;
+  gap: 4px;
+}
+
+.maze-cell {
+  width: 40px;
+  height: 40px;
+  background: rgba(51, 65, 85, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.maze-cell.wall {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.maze-cell.end {
+  background: #0d9488;
+}
+
+.maze-cell.has-ball {
+  background: #2563eb;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+}
+
+.pipeline-visualization {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin: 1rem 0;
+}
+
+.pipeline-step {
+  height: 30px;
+  background: rgba(51, 65, 85, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.pipeline-step.active {
+  background: #0d9488;
+  box-shadow: 0 0 10px rgba(13, 148, 136, 0.5);
+}
+
+h3 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}

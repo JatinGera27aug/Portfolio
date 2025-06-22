@@ -14,6 +14,29 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-height: 800px; /* Adjust this value based on your needs */
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  flex-grow: 0;
+  margin-bottom: 1rem;
+  /* Optional: limit description to specific lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-features {
+  flex-grow: 1;
 }
 
 .project-card:hover {

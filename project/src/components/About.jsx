@@ -1,4 +1,6 @@
 import React from 'react';
+import GitHubCalendar from 'react-github-calendar';
+import InteractiveSection from './InteractiveSection';
 import './About.css';
 
 const About = () => {
@@ -8,6 +10,7 @@ const About = () => {
         <h2 className="section-title fade-in">About Me</h2>
         
         <div className="about-content">
+          {/* Left side with text and stats */}
           <div className="about-text fade-in delay-1">
             <p>
               I'm a passionate backend developer with expertise in building scalable web applications, 
@@ -38,21 +41,9 @@ const About = () => {
                 <div className="stat-label">Technologies</div>
               </div>
             </div>
-
-            {/* GitHub Integration */}
-            <div className="github-stats fade-in delay-2">
-              <h3 className="github-title">
-                <span role="img" aria-label="GitHub">⚙️</span> GitHub Contributions
-              </h3>
-              <div className="github-graph">
-                <img 
-                  src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JatinGera27aug&theme=algolia" 
-                  alt="GitHub Contribution Graph" 
-                />
-              </div>
-            </div>
           </div>
           
+          {/* Right side with tech orbit */}
           <div className="about-image fade-in delay-2">
             <div className="tech-showcase">
               {/* Animated orbits */}
@@ -81,6 +72,26 @@ const About = () => {
                 <div className="particle"></div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* GitHub and Interactive Section Grid - MOVED OUTSIDE */}
+        <div className="contributions-grid fade-in delay-2">
+          <div className="github-stats">
+            <h3 className="github-title">
+              <span role="img" aria-label="GitHub">⚙️</span> GitHub Contributions
+            </h3>
+            <div className="github-graph">
+              <GitHubCalendar
+                username="JatinGera27aug"
+                blockSize={14}
+                blockMargin={5}
+                fontSize={14}
+              />
+            </div>
+          </div>
+          <div className="interactive-container">
+            <InteractiveSection />
           </div>
         </div>
       </div>

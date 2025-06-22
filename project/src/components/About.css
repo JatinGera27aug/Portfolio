@@ -455,49 +455,61 @@
   }
 }
 
-/* GitHub Integration and Interactive Resume Implementation */
+/* GitHub Integration and Interactive Section */
+/* Update these styles to fix the layout */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 48px; /* Add space before contributions grid */
+}
+
+/* Move contributions grid outside of about-content */
+.contributions-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .github-stats {
-  margin-top: 48px;
-  width: 100%;
   background: rgba(30, 41, 59, 0.3);
   border: 1px solid rgba(51, 65, 85, 0.3);
   border-radius: 12px;
-  padding: 24px;
-  transition: all 0.3s ease;
+  padding: 20px;
 }
 
-.github-stats:hover {
-  background: rgba(37, 99, 235, 0.1);
-  border-color: rgba(37, 99, 235, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+.interactive-container {
+  height: 100%;
 }
 
-.github-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #e2e8f0;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.interactive-container .interactive-section {
+  padding: 0;
+  height: 100%;
 }
 
-.github-graph {
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .contributions-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-.github-graph img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 /* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .contributions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 1400px) {
   .github-stats {
     margin-top: 56px;
